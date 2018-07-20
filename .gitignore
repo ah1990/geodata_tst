@@ -32,4 +32,8 @@
 !/shared/puma/pids/.keep
 !/shared/puma/log/.keep
 !/shared/puma/sockets/.keep
-.DS_Store
+.DS_Store/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
