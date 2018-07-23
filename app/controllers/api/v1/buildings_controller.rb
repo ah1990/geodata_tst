@@ -33,15 +33,19 @@ class Api::V1::BuildingsController < ApplicationController
   end
 
   def lon
-    params[:lon].to_f
+    point_params[:lon].to_f
   end
 
   def lat
-    params[:lat].to_f
+    point_params[:lat].to_f
   end
 
   def distance
     4000
+  end
+
+  def point_params
+    params.permit(:lon, :lat)
   end
 
 end
