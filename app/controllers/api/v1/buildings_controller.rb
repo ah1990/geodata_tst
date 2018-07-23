@@ -3,7 +3,7 @@ class Api::V1::BuildingsController < ApplicationController
   def index
     buildings = get_buildings_in_area_sql
     if buildings.present?
-      render status: :ok, json: { data: buildings, total: buildings.count }
+      render status: :ok, json: { buildings: buildings, total: buildings.count }
     else
       render status: :unprocessable_entity, json: { error: true }
     end
