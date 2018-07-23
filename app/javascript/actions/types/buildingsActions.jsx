@@ -8,7 +8,6 @@ export const findBuildingsAction = buildings => ({
 
 export const findBuildings = (lon, lat) => dispatch => {
   return Api.getNearestBuildings(lon, lat).then(response => {
-    debugger;
     dispatch(findBuildingsAction(response.data.buildings));
   })
 };
