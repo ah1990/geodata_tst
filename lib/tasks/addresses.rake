@@ -15,8 +15,6 @@ namespace :addresses do
 
     addresses = addresses.map { |ads| [ads['geometry']['location'], ads['vicinity']]  }
 
-    byebug
-
     addresses.each do |a|
       lonlat = a.first
       full_addr = a.last
