@@ -5,6 +5,9 @@
 ````
   yarn
   bundle install
+  rake db:create
+  rake db:gis:setup
+  rake db:migrate
   rake addresses:fetch_random_addresses
 ````
 
